@@ -1,0 +1,21 @@
+using System;
+
+namespace TriangleClassifier
+{
+    public class Triangle
+    {
+        public static string DetermineTriangleType(double a, double b, double c)
+        {
+            double a2 = a * a;
+            double b2 = b * b;
+            double c2 = c * c;
+
+            if (a2 + b2 == c2 || a2 + c2 == b2 || b2 + c2 == a2)
+                return "right";
+            else if (a2 + b2 < c2 || a2 + c2 < b2 || b2 + c2 < a2)
+                return "obtuse";
+            else
+                return "acute";
+        }
+    }
+}
